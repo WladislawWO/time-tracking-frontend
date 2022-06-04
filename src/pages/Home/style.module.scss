@@ -1,0 +1,30 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  box-sizing: border-box;
+  // color: #61dafb;
+}
+
+.trackingContainer {
+  width: auto;
+  margin: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  @media (max-width: 500px) {
+    margin: 20px 15px;
+    gap: 10px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
