@@ -10,3 +10,4 @@ export { ReactComponent as LogoutIcon } from './logout.svg';
 export { ReactComponent as CopyIcon } from './copy.svg';
 export { ReactComponent as HomeIcon } from './home.svg';
 export { ReactComponent as PlusIcon } from './plus.svg';
+export { ReactComponent as EyeIcon } from './eye.svg';

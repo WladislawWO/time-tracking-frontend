@@ -54,12 +54,38 @@
   min-width: 50px;
 
   @media (max-width: 500px) {
-    min-width: 37px;
+    min-width: 50%;
   }
 }
 
 .detailsBtn {
   width: 100%;
+
+  @media (max-width: 500px) {
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.detailText {
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+
+.eyeIcon {
+  display: none;
+  width: 17px;
+
+  @media (max-width: 500px) {
+    display: block;
+    :global {
+      path {
+        fill: #fff
+      }
+    }
+  }
 }
 
 .footer {
