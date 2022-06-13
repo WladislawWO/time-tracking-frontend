@@ -7,11 +7,16 @@ import { AddTimeModal } from '../../modals/AddTimeModal';
 import { useModal } from '../../contexts/modals';
 
 function Home() {
-  const { list, handleAddTime, updateList } = useHome();
+  const {
+    list, total, handleAddTime, updateList,
+  } = useHome();
   const { open, onOpen, onClose } = useModal();
 
   return (
     <div className={st.home}>
+      <div className={st.todayTotal}>
+        {total}
+      </div>
       <div className={st.trackingContainer}>
         {list.map(({ time, name, _id }) => (
           <TimeCard

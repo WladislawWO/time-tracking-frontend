@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useMutation } from 'react-query';
 import { useGetTimeList } from '../../api/hooks/useGetTimeList';
 import { timeService } from '../../services/timeService';
+import { getTime } from '../../utils';
 
 export const useHome = () => {
   const [list, setList] = useState([]);
@@ -28,8 +29,11 @@ export const useHome = () => {
     }
   }, [data?.data]);
 
+  const total = getTime(list.reduce((res, item) => res + item.time, 0));
+
   return {
     list,
+    total,
     handleAddTime,
     updateList,
   };
