@@ -8,6 +8,10 @@ import st from './style.module.scss';
 export default function TimeCard({
   time, title, id, handlePlus, onClickCard,
 }) {
+  const onPlus = (e) => {
+    e.stopPropagation();
+    handlePlus();
+  };
   return (
     <div
       className={st.card}
@@ -21,10 +25,10 @@ export default function TimeCard({
           {getTime(time)}
         </div>
         <div className={st.footer}>
-          <Button styles={st.pluseBtn} variant="secondary" onClick={handlePlus}>
+          <Button styles={st.pluseBtn} variant="secondary" onClick={onPlus}>
             <PlusIcon className={st.icon} />
           </Button>
-          <Link to={`/time/${id}`} className={st.link}>
+          <Link to={`/time/${id}`} className={st.link} onClick={(e) => e.stopPropagation()}>
             <Button styles={st.detailsBtn}>View Details</Button>
           </Link>
         </div>

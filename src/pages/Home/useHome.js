@@ -6,10 +6,15 @@ import { timeService } from '../../services/timeService';
 export const useHome = () => {
   const [list, setList] = useState([]);
   const { data } = useGetTimeList();
+
+  const updateList = (item) => {
+    setList(list.map((i) => (i._id === item._id ? item : i)));
+  };
+
   const { mutate } = useMutation(timeService.addTime, {
     onSuccess: (res) => {
       const item = res.data;
-      setList(list.map((i) => (i._id === item._id ? item : i)));
+      updateList(item);
     },
   });
 
@@ -26,5 +31,6 @@ export const useHome = () => {
   return {
     list,
     handleAddTime,
+    updateList,
   };
 };

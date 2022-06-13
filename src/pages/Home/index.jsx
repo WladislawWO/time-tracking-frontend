@@ -7,7 +7,7 @@ import { AddTimeModal } from '../../modals/AddTimeModal';
 import { useModal } from '../../contexts/modals';
 
 function Home() {
-  const { list, handleAddTime } = useHome();
+  const { list, handleAddTime, updateList } = useHome();
   const { open, onOpen, onClose } = useModal();
 
   return (
@@ -20,11 +20,11 @@ function Home() {
             title={name}
             id={_id}
             onClickCard={() => handleAddTime(_id, DEFAULT_ADD_TIME)}
-            handlePlus={() => onOpen(ADD_TIME_MODAL)}
+            handlePlus={() => onOpen(ADD_TIME_MODAL, _id)}
           />
         ))}
       </div>
-      <AddTimeModal onClose={onClose} open={open} />
+      <AddTimeModal onClose={onClose} open={open} updateList={updateList} />
     </div>
   );
 }
