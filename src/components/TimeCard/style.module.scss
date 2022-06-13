@@ -1,0 +1,68 @@
+.card {
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px;
+  width: 250px;
+
+  @media (max-width: 500px) {
+    width: calc(50% - 25px);
+  }
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+}
+
+.link {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.value {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 45px;
+
+  @media (max-width: 500px) {
+    margin-bottom: 20px;
+  }
+}
+
+.icon {
+  width: 15px;
+
+  :global {
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.pluseBtn {
+  font-size: 20px;
+  padding: 5px;
+  min-width: 50px;
+
+  @media (max-width: 500px) {
+    min-width: 37px;
+  }
+}
+
+.detailsBtn {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  gap: 5px;
+}
