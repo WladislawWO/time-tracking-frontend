@@ -5,12 +5,17 @@ import { DEFAULT_ADD_TIME } from '../../constants';
 import { useHome } from './useHome';
 import { AddTimeModal } from '../../modals/AddTimeModal';
 import { useModal } from '../../contexts/modals';
+import Loader from '../../components/Loader';
 
 function Home() {
   const {
-    list, total, handleAddTime, updateList,
+    list, total, isLoading, handleAddTime, updateList,
   } = useHome();
   const { open, onOpen, onClose } = useModal();
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <div className={st.home}>

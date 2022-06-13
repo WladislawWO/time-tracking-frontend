@@ -6,13 +6,13 @@ import { getTime } from '../../utils';
 
 export const useHome = () => {
   const [list, setList] = useState([]);
-  const { data } = useGetTimeList();
+  const { data, isLoading } = useGetTimeList();
 
   const updateList = (item) => {
     setList(list.map((i) => (i._id === item._id ? item : i)));
   };
 
-  const { mutate } = useMutation(timeService.addTime, {
+  const { mutate, isLoading: isLoadingUpdate } = useMutation(timeService.addTime, {
     onSuccess: (res) => {
       const item = res.data;
       updateList(item);
@@ -32,6 +32,7 @@ export const useHome = () => {
   const total = getTime(list.reduce((res, item) => res + item.time, 0));
 
   return {
+    isLoading: isLoading || isLoadingUpdate,
     list,
     total,
     handleAddTime,
