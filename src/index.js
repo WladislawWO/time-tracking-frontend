@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { QueryClientProvider, QueryClient } from 'react-query';
-import Home from './pages/Home';
+import { ToastContainer } from 'react-toastify';
 import reportWebVitals from './reportWebVitals';
-import TimeDetails from './pages/TimeDetails';
-import './index.css';
 import ModalProvider from './contexts/modals';
+import Routes from './routes';
+import './index.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -23,14 +24,8 @@ root.render(
   <BrowserRouter>
     <QueryClientProvider client={queryClient}>
       <ModalProvider>
-        <Switch>
-          <Route exact path="/time/:id">
-            <TimeDetails />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Routes />
+        <ToastContainer />
       </ModalProvider>
     </QueryClientProvider>
   </BrowserRouter>,

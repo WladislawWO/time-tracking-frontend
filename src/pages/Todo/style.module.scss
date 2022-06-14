@@ -1,0 +1,51 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nanum Gothic', sans-serif;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+.container {
+  width: auto;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 500px) {
+    width: calc(100% - 60px);
+    margin: 20px 15px;
+    gap: 30px;
+  }
+}
+
+
+.createContainer {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+.todo {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  width: 15px;
+  cursor: pointer;
+  :global {
+    path {
+      fill: #fff;
+    }
+  }
+  &:hover {
+    :global {
+      path {
+        fill: rgb(221, 72, 72);
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import CountUp from 'react-countup';
 import st from './style.module.scss';
 import TimeCard from '../../components/TimeCard';
 import { ADD_TIME_MODAL } from '../../constants/modals';
@@ -10,7 +11,7 @@ import Loader from '../../components/Loader';
 
 function Home() {
   const {
-    list, total, isLoading, handleAddTime, updateList,
+    list, total, isLoading, totalLabel, handleAddTime, updateList,
   } = useHome();
   const { open, onOpen, onClose } = useModal();
 
@@ -22,7 +23,8 @@ function Home() {
     <div className={st.home}>
       <Link to="time/total">
         <div className={st.todayTotal}>
-          {total}
+          <CountUp end={total} duration={2} decimals={2} />
+          {totalLabel}
         </div>
       </Link>
       <div className={st.trackingContainer}>

@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 export const apiRequestInterceptor = (config) => {
   const { url } = config;
   const token = localStorage.getItem('token');
@@ -22,15 +24,6 @@ export const apiRequestInterceptor = (config) => {
   return config;
 };
 
-export const apiResponseInterceptor = (response) => {
-  if (response.response.status === 401) {
-    if (window.location.pathname !== '/login') {
-      window.location = '/login';
-    }
-  }
-  if (response.code === 'ERR_NETWORK') {
-    if (window.location.pathname !== '/login') {
-      window.location = '/login';
-    }
-  }
+export const apiResponseInterceptor = () => {
+  toast.error('Network error');
 };

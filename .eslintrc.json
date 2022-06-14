@@ -18,6 +18,7 @@
         "react"
     ],
     "rules": {
+      "jsx-a11y/label-has-associated-control": "off",
       "jsx-a11y/no-static-element-interactions": "off",
       "class-methods-use-this": "off",
       "react/button-has-typ": "off",

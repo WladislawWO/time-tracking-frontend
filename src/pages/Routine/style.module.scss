@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nanum Gothic', sans-serif;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+.container {
+  width: auto;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 500px) {
+    width: calc(100% - 60px);
+    margin: 20px 15px;
+    gap: 30px;
+  }
+}
