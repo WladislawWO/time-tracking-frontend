@@ -29,7 +29,7 @@ export const useTimeDetails = () => {
   return {
     isLoading: isLoading || isLoading,
     title: isTotal ? 'total' : data?.data?.name,
-    labels,
-    values,
+    labels: ['0', '0', ...labels, '0', '0'],
+    values: [0, 0, ...values, 0, 0],
   };
 };

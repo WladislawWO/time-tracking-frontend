@@ -8,12 +8,9 @@ function Routine() {
     list, isLoading, handleCompleted,
   } = useRoutine();
 
-  if (isLoading) {
-    return <Loader />;
-  }
-
   return (
     <div className={st.wrapper}>
+      <Loader isLoading={isLoading} />
       <div className={st.container}>
         {list.map(({ completed, name, _id }, i) => (
           <Checkbox

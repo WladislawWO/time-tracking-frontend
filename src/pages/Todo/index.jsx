@@ -14,12 +14,9 @@ function Todo() {
   } = useTodo();
   const { onOpen, open, onClose } = useModal();
 
-  if (isLoading) {
-    return <Loader />;
-  }
-
   return (
     <div className={st.wrapper}>
+      <Loader isLoading={isLoading} />
       <div className={st.createContainer}>
         <Button onClick={() => onOpen(CRAETE_TODO_MODAL)}>
           Craete

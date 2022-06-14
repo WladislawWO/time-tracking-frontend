@@ -15,15 +15,12 @@ function Home() {
   } = useHome();
   const { open, onOpen, onClose } = useModal();
 
-  if (isLoading) {
-    return <Loader />;
-  }
-
   return (
     <div className={st.home}>
+      <Loader isLoading={isLoading} />
       <Link to="time/total">
         <div className={st.todayTotal}>
-          <CountUp end={total} duration={2} decimals={2} />
+          <CountUp end={total} duration={1} decimals={2} />
           {totalLabel}
         </div>
       </Link>
