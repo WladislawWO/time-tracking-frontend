@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import st from './style.module.scss';
 import TimeCard from '../../components/TimeCard';
 import { ADD_TIME_MODAL } from '../../constants/modals';
@@ -19,9 +20,11 @@ function Home() {
 
   return (
     <div className={st.home}>
-      <div className={st.todayTotal}>
-        {total}
-      </div>
+      <Link to="time/total">
+        <div className={st.todayTotal}>
+          {total}
+        </div>
+      </Link>
       <div className={st.trackingContainer}>
         {list.map(({ time, name, _id }) => (
           <TimeCard

@@ -9,8 +9,12 @@ class TimeService {
     return httpClient.get('time/time-list').then((res) => res);
   }
 
-  getTime({ id }) {
+  getTime(id) {
     return httpClient.get(`time/${id}`).then((res) => res);
+  }
+
+  getTotal() {
+    return httpClient.get('time/total').then((res) => res);
   }
 }
 
