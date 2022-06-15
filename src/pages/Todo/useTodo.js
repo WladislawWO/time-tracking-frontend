@@ -3,7 +3,8 @@ import { useMutation } from 'react-query';
 import { useTodoListQuery } from '../../api/hooks/useTodoListQuery';
 import { todoService } from '../../services/todoService';
 
-export const useTodo = () => {
+export const useTodo = (onClose) => {
+  const [open, setOpen] = useState(null);
   const [list, setList] = useState([]);
   const { data, isLoading } = useTodoListQuery();
   const { mutate: create, isLoading: isLoadingCreate } = useMutation(
@@ -24,15 +25,30 @@ export const useTodo = () => {
     setList(list.map((i) => (i._id === _id ? { ...i, completed } : i)));
   };
 
+  const handleEditSubTodo = ({ i, completed, _id }) => {
+    const { todos } = list.find((i) => i._id === _id);
+    const newTodos = [...todos];
+    newTodos[i] = { ...newTodos[i], completed };
+    update({ _id, todos: newTodos });
+  };
+
   const handleCreate = ({
     title, todos,
   }) => {
-    create({ title });
+    create({ title, todos });
   };
 
   const handleDelete = (id) => {
-    deleteTodo(id);
-    setList(list.filter((i) => i._id !== id));
+    if (id) {
+      deleteTodo(id);
+      setList(list.filter((i) => i._id !== id));
+    }
+    onClose();
+  };
+
+  const toggleOpen = (id) => {
+    if (id === open) setOpen(null);
+    else setOpen(id);
   };
 
   useEffect(() => {
@@ -44,6 +60,9 @@ export const useTodo = () => {
   return {
     isLoading: isLoading || isLoadingUpdate || isLoadingCreate || isLoadingDelete,
     list,
+    open,
+    toggleOpen,
+    handleEditSubTodo,
     handleDelete,
     handleEdit,
     handleCreate,

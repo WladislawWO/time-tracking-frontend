@@ -12,3 +12,4 @@ export { ReactComponent as HomeIcon } from './home.svg';
 export { ReactComponent as PlusIcon } from './plus.svg';
 export { ReactComponent as EyeIcon } from './eye.svg';
 export { ReactComponent as DeleteIcon } from './delete.svg';
+export { ReactComponent as ArrowDownIcon } from './arrowDown.svg';

@@ -23,3 +23,31 @@
   margin-top: 10px;
   margin-left: auto;
 }
+
+.subTodoBtn {
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.subTodoContainer {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo {
+  width: calc(100% - 24px);
+  margin-left: auto;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: -20px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #4B5D67;
+  }
+}

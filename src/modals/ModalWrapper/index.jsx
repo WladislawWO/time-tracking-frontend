@@ -13,7 +13,7 @@ export function ModalWrapper({
   return (
     <div className={cn(st.modalContainer, styles, { [st.open]: open })}>
       <div className={cn(st.modalContent, modalContentStyles)} ref={ref}>
-        <ClsoeIcon className={st.icon} onClick={onClose} />
+        <ClsoeIcon className={st.icon} onClick={() => onClose()} />
         {children}
       </div>
     </div>

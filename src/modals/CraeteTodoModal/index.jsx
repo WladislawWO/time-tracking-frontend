@@ -10,7 +10,11 @@ export function CraeteTodoModal({
   open, onClose, handleCreate,
 }) {
   const {
-    handleChange, onSave,
+    handleChange,
+    onSave,
+    handleAddSubTodo,
+    handleChangeSubTodo,
+    todos,
   } = useCreateTodoModal(handleCreate, onClose);
 
   return (
@@ -20,6 +24,19 @@ export function CraeteTodoModal({
           <div className={st.title}>Create Todo</div>
         </div>
         <Input placeholder="Todo title" onChange={handleChange} />
+        <Button variant="secondary" onClick={handleAddSubTodo} styles={st.subTodoBtn}>
+          Add sub todo
+        </Button>
+
+        <div className={st.subTodoContainer}>
+          {todos.map((_, i) => (
+            <div className={st.todo}>
+              <Input
+                onChange={(e) => handleChangeSubTodo(e.target.value, i)}
+              />
+            </div>
+          ))}
+        </div>
 
         <Button styles={st.btn} onClick={onSave}>
           Save

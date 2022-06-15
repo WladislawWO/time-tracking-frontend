@@ -1,18 +1,29 @@
+import cn from 'classnames';
 import st from './style.module.scss';
 import { useTodo } from './useTodo';
 import Loader from '../../components/Loader';
 import Checkbox from '../../components/CheckBox';
 import Button from '../../components/Button';
 import { useModal } from '../../contexts/modals';
-import { CRAETE_TODO_MODAL } from '../../constants/modals';
+import { CONFIRM_DELETE_MODAL, CRAETE_TODO_MODAL } from '../../constants/modals';
 import { CraeteTodoModal } from '../../modals/CraeteTodoModal';
-import { DeleteIcon } from '../../assets/icons';
+import { ArrowDownIcon, DeleteIcon } from '../../assets/icons';
+import { ConfirmDeleteModal } from '../../modals/ConfirmDeleteModal';
 
 function Todo() {
   const {
-    list, isLoading, handleEdit, handleCreate, handleDelete,
-  } = useTodo();
-  const { onOpen, open, onClose } = useModal();
+    onOpen, open, onClose, data,
+  } = useModal();
+  const {
+    list,
+    isLoading,
+    open: openTodo,
+    handleEdit,
+    handleCreate,
+    handleDelete,
+    handleEditSubTodo,
+    toggleOpen,
+  } = useTodo(onClose);
 
   return (
     <div className={st.wrapper}>
@@ -23,22 +34,43 @@ function Todo() {
         </Button>
       </div>
       <div className={st.container}>
-        {list.map(({ completed, title, _id }, i) => (
-          <div className={st.todoContainer}>
+        {list.map(({
+          completed, title, todos, _id,
+        }, i) => (
+          <div className={st.todoContainer} key={_id}>
             <div className={st.todo}>
+              {!!todos.length && (
+                <ArrowDownIcon
+                  className={cn(st.arrow, { [st.open]: openTodo === _id })}
+                  onClick={() => toggleOpen(_id)}
+                />
+              )}
               <Checkbox
-                key={i}
                 checked={completed}
                 title={title}
                 onChange={(completed) => handleEdit({ _id, completed })}
               />
-              <DeleteIcon className={st.icon} onClick={() => handleDelete(_id)} />
+              <DeleteIcon className={st.icon} onClick={() => onOpen(CONFIRM_DELETE_MODAL, _id)} />
             </div>
-            <div className={st.subTodo} />
+            <div className={cn(st.subTodo, { [st.open]: openTodo === _id })}>
+              {todos.map((item, i) => (
+                <Checkbox
+                  key={i}
+                  checked={item.completed}
+                  title={item.title}
+                  onChange={(completed) => handleEditSubTodo({ i, completed, _id })}
+                />
+              ))}
+            </div>
           </div>
         ))}
       </div>
-      <CraeteTodoModal open={open} onClose={onClose} handleCreate={handleCreate} />
+      {open === CRAETE_TODO_MODAL && (
+        <CraeteTodoModal open={open} onClose={onClose} handleCreate={handleCreate} />
+      )}
+      {open === CONFIRM_DELETE_MODAL && (
+        <ConfirmDeleteModal open={open} onClose={handleDelete} id={data} />
+      )}
     </div>
   );
 }

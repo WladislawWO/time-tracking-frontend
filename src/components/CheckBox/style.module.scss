@@ -12,6 +12,7 @@
   display: inline-block;
   height: 20px;
   width: 20px;
+  min-width: 20px;
   background: #fff;
   border: 2px #ddd solid;
   margin-right: 4px;
@@ -20,7 +21,7 @@
 .label {
   font-size: 26px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   color: #fff;
   text-transform: capitalize;
