@@ -1,8 +1,8 @@
 import httpClient from '../api/httpClient';
 
 class TimeService {
-  addTime({ _id, time }) {
-    return httpClient.post('time/add-time', { _id, time }).then((res) => res);
+  addTime({ _id, time, date }) {
+    return httpClient.post('time/add-time', { _id, time, date }).then((res) => res);
   }
 
   getTimeList() {

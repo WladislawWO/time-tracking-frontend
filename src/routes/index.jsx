@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Loader from '../components/Loader';
 import MainLayout from '../layouts/MainLayout';
 
@@ -27,6 +27,8 @@ export default function Routes() {
           <Route exact path="/todo">
             <Todo />
           </Route>
+
+          <Redirect to="/" />
         </MainLayout>
       </Switch>
     </Suspense>

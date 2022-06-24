@@ -1,12 +1,21 @@
+import Button from '../../components/Button';
+import Input from '../../components/Input';
 import LineChart from '../../components/LineChart';
 import Loader from '../../components/Loader';
-import st from './style.module.scss';
 import { useTimeDetails } from './useTimeDetails';
+import st from './style.module.scss';
 
 function TimeDetails() {
   const {
-    labels, values, title, isLoading,
+    labels,
+    values,
+    title,
+    isLoading,
+    register,
+    handleSubmit,
   } = useTimeDetails();
+
+  const onSubmit = (data) => console.log(data);
 
   if (isLoading) return <Loader />;
 
@@ -24,6 +33,19 @@ function TimeDetails() {
           values={values}
           gradient={['#29901e', '#77c91a']}
         />
+      </div>
+      <div className={st.timeForm}>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Input
+            {...register('minTime')}
+            containerStyles={st.containerInput}
+            label="Minimum time"
+          />
+
+          <Button type="submit" styles={st.button}>
+            Save
+          </Button>
+        </form>
       </div>
     </div>
   );

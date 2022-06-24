@@ -30,3 +30,8 @@ export const getTimeLabels = (time) => {
 
   return res;
 };
+
+export const getFieldDate = () => {
+  const date = new Date();
+  return `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`;
+};

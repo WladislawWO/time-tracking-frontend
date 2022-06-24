@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../../components/Button';
+import Datepicker from '../../components/Datepicker';
 import Input from '../../components/Input';
 import { ModalWrapper } from '../ModalWrapper';
 import st from './styles.module.scss';
@@ -9,7 +10,7 @@ export function AddTimeModal({
   open, onClose, updateList,
 }) {
   const {
-    positive, setPositive, handleChange, handleChangeTime,
+    handleChange, handleChangeTime, handleChangeDate,
   } = useAddTimeModal(updateList, onClose);
 
   return (
@@ -18,15 +19,9 @@ export function AddTimeModal({
         <div className={st.header}>
           <div className={st.title}>Add time</div>
         </div>
-        <Input type="number" onChange={handleChange} />
+        <Input type="number" onChange={handleChange} label="Time:" />
 
-        <Button
-          onClick={() => setPositive((value) => !value)}
-          styles={st.timeBtn}
-          variant={positive ? 'secondary' : 'danger'}
-        >
-          {positive ? 'Add time' : 'Reduce time'}
-        </Button>
+        <Datepicker onChange={handleChangeDate} />
 
         <Button styles={st.btn} onClick={handleChangeTime}>
           Save
