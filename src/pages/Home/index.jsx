@@ -25,9 +25,13 @@ function Home() {
         </div>
       </Link>
       <div className={st.trackingContainer}>
-        {list.map(({ time, name, _id }) => (
+        {list.map(({
+          time, name, streak, _id, minTime,
+        }) => (
           <TimeCard
             key={_id}
+            minTime={minTime}
+            streak={streak}
             time={time}
             title={name}
             id={_id}

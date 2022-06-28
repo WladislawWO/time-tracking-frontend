@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useQuery } from 'react-query';
+import { useMutation, useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { queryKeys } from '../../api/queryKeys';
@@ -15,16 +15,22 @@ export const useTimeDetails = () => {
     queryKeys.total,
     isTotal ? timeService.getTotal : () => timeService.getTime(params.id),
   );
+  const { mutate, isLoading: isLoadingUpdateTime } = useMutation(timeService.updateTimeCategory);
+
   const { register, handleSubmit, setValue } = useForm();
 
   const res = (isTotal ? data?.data : data?.data?.time) || [];
 
   const labels = res?.map(({ date }) => {
-    const [first, second] = date.split('-');
-    return `${first} ${months[second]}`;
+    const [first, second, last] = date.split('-');
+    return `${last} ${months[second - 1]}`;
   }) || [];
 
   const values = res?.map((i) => i.time) || [];
+
+  const onSubmit = ({ minTime }) => {
+    mutate({ _id: params.id, minTime });
+  };
 
   useEffect(() => {
     if (data?.data) {
@@ -37,7 +43,8 @@ export const useTimeDetails = () => {
   return {
     register,
     handleSubmit,
-    isLoading: isLoading || isLoading,
+    onSubmit,
+    isLoading: isLoading || isLoadingUpdateTime,
     title: isTotal ? 'total' : data?.data?.name,
     labels: ['0', '0', ...labels, '0', '0'],
     values: [0, 0, ...values, 0, 0],

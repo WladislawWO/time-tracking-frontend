@@ -13,9 +13,8 @@ function TimeDetails() {
     isLoading,
     register,
     handleSubmit,
+    onSubmit,
   } = useTimeDetails();
-
-  const onSubmit = (data) => console.log(data);
 
   if (isLoading) return <Loader />;
 

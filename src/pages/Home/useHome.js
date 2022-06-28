@@ -9,7 +9,7 @@ export const useHome = () => {
   const { data, isLoading } = useGetTimeListQuery();
 
   const updateList = (item) => {
-    setList(list.map((i) => (i._id === item._id ? item : i)));
+    setList(list.map((i) => (i._id === item._id ? { ...i, ...item } : i)));
   };
 
   const { mutate, isLoading: isLoadingUpdate } = useMutation(timeService.addTime, {
