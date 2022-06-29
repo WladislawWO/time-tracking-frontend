@@ -18,6 +18,25 @@
   margin-left: auto;
 }
 
+.timeSnippets {
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timeSnippet {
+  border: 1px solid #02AAB0;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  min-width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
 .timeBtn {
   width: 150px;
   margin-top: 10px;

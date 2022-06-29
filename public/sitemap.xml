@@ -1,531 +1,202 @@
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.chipper.co.il/</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/categories</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/categories</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/categories</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/categories</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/help</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/help</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/help</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/help</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/nearby</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/nearby</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/nearby</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/nearby</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/about</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/about</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/about</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/about</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/contact</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/contact</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/contact</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/contact</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/notifications</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/notifications</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/notifications</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/notifications</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/preffered_categories</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/preffered_categories</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/preffered_categories</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/preffered_categories</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/privacy</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/privacy</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/privacy</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/privacy</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/qr</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-    <url>
-    <loc>https://www.chipper.co.il/en/qr</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/qr</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/qr</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/register_as_manufacturer</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/register_as_manufacturer</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/register_as_manufacturer</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/register_as_manufacturer</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/saved-coupons</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/saved-coupons</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/saved-coupons</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/saved-coupons</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/settings</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/settings</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/settings</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/settings</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/company/5fd0dd24848e19131c304330</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/company/5fd0dd24848e19131c304330</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/company/5fd0dd24848e19131c304330</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/company/5fd0dd24848e19131c304330</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/suitable_for_me</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/suitable_for_me</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/suitable_for_me</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/suitable_for_me</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/terms_of_use</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/terms_of_use</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/terms_of_use</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/terms_of_use</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/profile</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/profile</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/profile</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/profile</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/coupon/6296f5b4a086a422760e4330</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/coupon/6296f5b4a086a422760e4330</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/coupon/6296f5b4a086a422760e4330</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/coupon/6296f5b4a086a422760e4330</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/transactions-history</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/transactions-history</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/transactions-history</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/transactions-history</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5f16c3c30fbce6038d9995fc</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5f16c3c30fbce6038d9995fc</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5f16c3c30fbce6038d9995fc</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5f16c3c30fbce6038d9995fc</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5e34015de1e5b578466d80f3</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5e34015de1e5b578466d80f3</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5e34015de1e5b578466d80f3</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5e34015de1e5b578466d80f3</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5e34015de1e5b578466d80f9</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5e34015de1e5b578466d80f9</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5e34015de1e5b578466d80f9</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5e34015de1e5b578466d80f9</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5f16c4170fbce6038d9995fd</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5f16c4170fbce6038d9995fd</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5f16c4170fbce6038d9995fd</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5f16c4170fbce6038d9995fd</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5c3364344e3eaa77253f3104</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5c3364344e3eaa77253f3104</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5c3364344e3eaa77253f3104</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5c3364344e3eaa77253f3104</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5e34015de1e5b578466d80f2</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5e34015de1e5b578466d80f2</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5e34015de1e5b578466d80f2</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5e34015de1e5b578466d80f2</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5e34015de1e5b578466d80f6</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5e34015de1e5b578466d80f6</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5e34015de1e5b578466d80f6</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5e34015de1e5b578466d80f6</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5e8b221fc6dc894eaf4cf964</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5e8b221fc6dc894eaf4cf964</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5e8b221fc6dc894eaf4cf964</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5e8b221fc6dc894eaf4cf964</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5e34015de1e5b578466d80f7</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5e34015de1e5b578466d80f7</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5e34015de1e5b578466d80f7</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5e34015de1e5b578466d80f7</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5e34015de1e5b578466d80f8</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5e34015de1e5b578466d80f8</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5e34015de1e5b578466d80f8</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5e34015de1e5b578466d80f8</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5e8b221fc6dc894eaf4cf922</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5e8b221fc6dc894eaf4cf922</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5e8b221fc6dc894eaf4cf922</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5e8b221fc6dc894eaf4cf922</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5c336db54e3eaa772769b2c3</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5c336db54e3eaa772769b2c3</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5c336db54e3eaa772769b2c3</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5c336db54e3eaa772769b2c3</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/5e8b221fc6dc894eaf4cf96a</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/5e8b221fc6dc894eaf4cf96a</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/5e8b221fc6dc894eaf4cf96a</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/5e8b221fc6dc894eaf4cf96a</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/category/6177b77765a07679430d2527</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/en/category/6177b77765a07679430d2527</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/he/category/6177b77765a07679430d2527</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://www.chipper.co.il/ru/category/6177b77765a07679430d2527</loc>
-    <lastmod>2022-06-29</lastmod>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+<loc>https://www.duolingo.com/course/ar/en/Learn-Arabic</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/cs/en/Learn-Czech</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/cy/en/Learn-Welsh</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/da/en/Learn-Danish</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/de/en/Learn-German</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/el/en/Learn-Greek</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/eo/en/Learn-Esperanto</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/es/en/Learn-Spanish</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/fi/en/Learn-Finnish</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/fr/en/Learn-French</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/ga/en/Learn-Irish</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/gd/en/Learn-Scottish-Gaelic</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/he/en/Learn-Hebrew</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/hi/en/Learn-Hindi</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/ht/en/Learn-Haitian-Creole</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/hu/en/Learn-Hungarian</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/hv/en/Learn-High-Valyrian</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/hw/en/Learn-Hawaiian</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/id/en/Learn-Indonesian</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/it/en/Learn-Italian</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/ja/en/Learn-Japanese</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/ko/en/Learn-Korean</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/la/en/Learn-Latin</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/nl-NL/en/Learn-Dutch</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/no-BO/en/Learn-Norwegian-Bokm%C3%A5l</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/nv/en/Learn-Navajo</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/pl/en/Learn-Polish</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/pt/en/Learn-Portuguese</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/ro/en/Learn-Romanian</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/ru/en/Learn-Russian</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/sv/en/Learn-Swedish</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/sw/en/Learn-Swahili</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/tlh/en/Learn-Klingon</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/tr/en/Learn-Turkish</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/uk/en/Learn-Ukrainian</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/vi/en/Learn-Vietnamese</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/yi/en/Learn-Yiddish</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/course/zh-CN/en/Learn-Chinese</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/courses</loc>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.duolingo.com/courses/all</loc>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
 </urlset>

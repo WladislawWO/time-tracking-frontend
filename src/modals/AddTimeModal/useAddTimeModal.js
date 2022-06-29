@@ -24,13 +24,19 @@ export const useAddTimeModal = (updateList, onClose) => {
     setValue(e.target.value);
   };
 
+  const setTime = (time) => {
+    setValue(time);
+  };
+
   const handleChangeDate = (date) => {
     setDate(date);
   };
 
   return {
+    value,
     handleChange,
     handleChangeTime,
     handleChangeDate,
+    setTime,
   };
 };

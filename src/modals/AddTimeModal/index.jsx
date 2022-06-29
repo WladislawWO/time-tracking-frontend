@@ -6,11 +6,17 @@ import { ModalWrapper } from '../ModalWrapper';
 import st from './styles.module.scss';
 import { useAddTimeModal } from './useAddTimeModal';
 
+let number = 0;
+const timeSnippets = Array.from({ length: 23 }, () => {
+  number += 5;
+  return number;
+});
+
 export function AddTimeModal({
   open, onClose, updateList,
 }) {
   const {
-    handleChange, handleChangeTime, handleChangeDate,
+    value, handleChange, handleChangeTime, handleChangeDate, setTime,
   } = useAddTimeModal(updateList, onClose);
 
   return (
@@ -19,7 +25,15 @@ export function AddTimeModal({
         <div className={st.header}>
           <div className={st.title}>Add time</div>
         </div>
-        <Input type="number" onChange={handleChange} label="Time:" />
+        <Input value={value} type="number" onChange={handleChange} label="Time:" />
+
+        <div className={st.timeSnippets}>
+          {timeSnippets.map((item) => (
+            <div className={st.timeSnippet} onClick={() => setTime(item)} key={item}>
+              {item}
+            </div>
+          ))}
+        </div>
 
         <Datepicker onChange={handleChangeDate} />
 
