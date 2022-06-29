@@ -8,6 +8,7 @@ import ModalProvider from './contexts/modals';
 import Routes from './routes';
 import './index.css';
 import 'react-toastify/dist/ReactToastify.css';
+import MainProvider from './contexts/main';
 
 const queryClient = new QueryClient({
   // defaultOptions: {
@@ -24,7 +25,9 @@ root.render(
   <BrowserRouter>
     <QueryClientProvider client={queryClient}>
       <ModalProvider>
-        <Routes />
+        <MainProvider>
+          <Routes />
+        </MainProvider>
         <ToastContainer />
       </ModalProvider>
     </QueryClientProvider>

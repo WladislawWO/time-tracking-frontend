@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useMutation } from 'react-query';
-import { useGetRoutineListQuery } from '../../api/hooks/useGetRoutineListQuery';
+import { useMain } from '../../contexts/main';
 import { routineService } from '../../services/routineService';
 
 export const useRoutine = () => {
   const [list, setList] = useState([]);
-  const { data, isLoading } = useGetRoutineListQuery();
+  const { routineList, isLoading } = useMain();
   const { mutate, isLoading: isLoadingUpdate } = useMutation(routineService.completeRoutine);
 
   const handleCompleted = (_id, completed) => {
@@ -14,10 +14,10 @@ export const useRoutine = () => {
   };
 
   useEffect(() => {
-    if (data?.data) {
-      setList(data.data);
+    if (routineList?.data) {
+      setList(routineList.data);
     }
-  }, [data?.data]);
+  }, [routineList?.data]);
 
   return {
     isLoading: isLoading || isLoadingUpdate,

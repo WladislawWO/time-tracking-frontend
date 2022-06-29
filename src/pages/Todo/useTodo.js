@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useMutation } from 'react-query';
-import { useTodoListQuery } from '../../api/hooks/useTodoListQuery';
+import { useMain } from '../../contexts/main';
 import { todoService } from '../../services/todoService';
 
 export const useTodo = (onClose) => {
   const [open, setOpen] = useState(null);
   const [list, setList] = useState([]);
-  const { data, isLoading } = useTodoListQuery();
+  const { todoList, isLoading } = useMain();
   const { mutate: create, isLoading: isLoadingCreate } = useMutation(
     todoService.createTodo,
     {
@@ -52,10 +52,10 @@ export const useTodo = (onClose) => {
   };
 
   useEffect(() => {
-    if (data?.data) {
-      setList(data.data);
+    if (todoList?.data) {
+      setList(todoList.data);
     }
-  }, [data?.data]);
+  }, [todoList?.data]);
 
   return {
     isLoading: isLoading || isLoadingUpdate || isLoadingCreate || isLoadingDelete,

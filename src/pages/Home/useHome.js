@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useMutation } from 'react-query';
-import { useGetTimeListQuery } from '../../api/hooks/useGetTimeListQuery';
+import { useMain } from '../../contexts/main';
 import { timeService } from '../../services/timeService';
 import { formatTime, getTimeLabels } from '../../utils';
 
 export const useHome = () => {
   const [list, setList] = useState([]);
-  const { data, isLoading, refetch } = useGetTimeListQuery();
+  const { timeList, isLoading, refetchTimeList } = useMain();
 
   const updateList = (item) => {
     setList(list.map((i) => (i._id === item._id ? { ...i, ...item } : i)));
@@ -23,7 +23,7 @@ export const useHome = () => {
     mutate: updateStatistics,
     isLoading: isLoadingStatistics,
   } = useMutation(timeService.updateTimeStatistics, {
-    onSuccess: refetch,
+    onSuccess: refetchTimeList,
   });
 
   const handleAddTime = (_id, time) => {
@@ -31,10 +31,10 @@ export const useHome = () => {
   };
 
   useEffect(() => {
-    if (data?.data) {
-      setList(data.data);
+    if (timeList?.data) {
+      setList(timeList.data);
     }
-  }, [data?.data]);
+  }, [timeList?.data]);
 
   const total = list.reduce((res, item) => res + item.time, 0);
 
