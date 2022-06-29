@@ -6,7 +6,7 @@ import { formatTime, getTimeLabels } from '../../utils';
 
 export const useHome = () => {
   const [list, setList] = useState([]);
-  const { data, isLoading } = useGetTimeListQuery();
+  const { data, isLoading, refetch } = useGetTimeListQuery();
 
   const updateList = (item) => {
     setList(list.map((i) => (i._id === item._id ? { ...i, ...item } : i)));
@@ -17,6 +17,13 @@ export const useHome = () => {
       const item = res.data;
       updateList(item);
     },
+  });
+
+  const {
+    mutate: updateStatistics,
+    isLoading: isLoadingStatistics,
+  } = useMutation(timeService.updateTimeStatistics, {
+    onSuccess: refetch,
   });
 
   const handleAddTime = (_id, time) => {
@@ -32,11 +39,12 @@ export const useHome = () => {
   const total = list.reduce((res, item) => res + item.time, 0);
 
   return {
-    isLoading: isLoading || isLoadingUpdate,
+    isLoading: isLoading || isLoadingUpdate || isLoadingStatistics,
     list,
     total: formatTime(total),
     totalLabel: getTimeLabels(total),
     handleAddTime,
+    updateStatistics,
     updateList,
   };
 };

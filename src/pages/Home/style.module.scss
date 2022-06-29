@@ -20,6 +20,22 @@
   }
 }
 
+.refresh {
+  position: absolute;
+  top: 60px;
+  cursor: pointer;
+  right: 17px;
+}
+
+.refreshIcon {
+  width: 40px;
+  :global {
+    path {
+      fill: #02AAB0;
+    }
+  }
+}
+
 .todayTotal {
   margin-top: 30px;
   margin-bottom: 20px;

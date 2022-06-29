@@ -8,22 +8,29 @@ import { useHome } from './useHome';
 import { AddTimeModal } from '../../modals/AddTimeModal';
 import { useModal } from '../../contexts/modals';
 import Loader from '../../components/Loader';
+import { RefreshIcon } from '../../assets/icons';
 
 function Home() {
   const {
-    list, total, isLoading, totalLabel, handleAddTime, updateList,
+    list, total, isLoading, totalLabel, handleAddTime, updateList, updateStatistics,
   } = useHome();
   const { open, onOpen, onClose } = useModal();
 
   return (
     <div className={st.home}>
       <Loader isLoading={isLoading} />
+
       <Link to="time/total">
         <div className={st.todayTotal}>
           <CountUp end={total} duration={1} decimals={2} />
           {totalLabel}
         </div>
       </Link>
+
+      <div className={st.refresh} onClick={updateStatistics}>
+        <RefreshIcon className={st.refreshIcon} />
+      </div>
+
       <div className={st.trackingContainer}>
         {list.map(({
           time, name, streak, _id, minTime,

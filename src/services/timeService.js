@@ -1,6 +1,10 @@
 import httpClient from '../api/httpClient';
 
 class TimeService {
+  updateTimeStatistics() {
+    return httpClient.post('time/update').then((res) => res);
+  }
+
   updateTimeCategory({ _id, minTime }) {
     return httpClient.post(`time/update-min-time/${_id}`, { minTime }).then((res) => res);
   }
