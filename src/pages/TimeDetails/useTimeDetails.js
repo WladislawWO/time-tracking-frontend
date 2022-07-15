@@ -46,7 +46,7 @@ export const useTimeDetails = () => {
     onSubmit,
     isLoading: isLoading || isLoadingUpdateTime,
     title: isTotal ? 'total' : data?.data?.name,
-    labels: ['0', '0', ...labels, '0', '0'],
-    values: [0, 0, ...values, 0, 0],
+    labels,
+    values,
   };
 };
