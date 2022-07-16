@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useMutation, useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
@@ -8,12 +8,15 @@ import { timeService } from '../../services/timeService';
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 export const useTimeDetails = () => {
+  const [tab, setTab] = useState(30);
   const params = useParams();
   const isTotal = params.id === 'total';
 
   const { isLoading, data, remove } = useQuery(
-    queryKeys.total,
-    isTotal ? timeService.getTotal : () => timeService.getTime(params.id),
+    [queryKeys.total, tab],
+    isTotal
+      ? () => timeService.getTotal(tab)
+      : () => timeService.getTime({ id: params.id, dataCount: tab }),
   );
   const { mutate, isLoading: isLoadingUpdateTime } = useMutation(timeService.updateTimeCategory);
 
@@ -44,6 +47,8 @@ export const useTimeDetails = () => {
     register,
     handleSubmit,
     onSubmit,
+    setTab,
+    tab,
     isLoading: isLoading || isLoadingUpdateTime,
     title: isTotal ? 'total' : data?.data?.name,
     labels,

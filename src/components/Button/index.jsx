@@ -1,4 +1,3 @@
-/* eslint-disable react/button-has-type */
 import React from 'react';
 import cn from 'classnames';
 import st from './style.module.scss';

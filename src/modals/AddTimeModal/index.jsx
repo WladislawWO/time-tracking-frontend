@@ -16,31 +16,33 @@ export function AddTimeModal({
   open, onClose, updateList,
 }) {
   const {
-    value, handleChange, handleChangeTime, handleChangeDate, setTime,
+    handleChangeDate, setTime, handleSubmit, onSubmit, register,
   } = useAddTimeModal(updateList, onClose);
 
   return (
     <ModalWrapper open={open} onClose={onClose}>
-      <div className={st.addTimeModal}>
-        <div className={st.header}>
-          <div className={st.title}>Add time</div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className={st.addTimeModal}>
+          <div className={st.header}>
+            <div className={st.title}>Add time</div>
+          </div>
+          <Input {...register('time')} type="number" label="Time:" />
+
+          <div className={st.timeSnippets}>
+            {timeSnippets.map((item) => (
+              <div className={st.timeSnippet} onClick={() => setTime(item)} key={item}>
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <Datepicker onChange={handleChangeDate} />
+
+          <Button styles={st.btn}>
+            Save
+          </Button>
         </div>
-        <Input value={value} type="number" onChange={handleChange} label="Time:" />
-
-        <div className={st.timeSnippets}>
-          {timeSnippets.map((item) => (
-            <div className={st.timeSnippet} onClick={() => setTime(item)} key={item}>
-              {item}
-            </div>
-          ))}
-        </div>
-
-        <Datepicker onChange={handleChangeDate} />
-
-        <Button styles={st.btn} onClick={handleChangeTime}>
-          Save
-        </Button>
-      </div>
+      </form>
     </ModalWrapper>
   );
 }

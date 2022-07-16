@@ -17,12 +17,12 @@ class TimeService {
     return httpClient.get('time/time-list').then((res) => res);
   }
 
-  getTime(id) {
-    return httpClient.get(`time/${id}`).then((res) => res);
+  getTime({ id, dataCount }) {
+    return httpClient.get(`time/${id}?dataCount=${dataCount}`).then((res) => res);
   }
 
-  getTotal() {
-    return httpClient.get('time/total').then((res) => res);
+  getTotal(dataCount) {
+    return httpClient.get(`time/total?dataCount=${dataCount}`).then((res) => res);
   }
 }
 

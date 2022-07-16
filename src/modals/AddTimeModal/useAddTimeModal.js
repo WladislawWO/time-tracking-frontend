@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { useMutation } from 'react-query';
 import { useModal } from '../../contexts/modals';
 import { timeService } from '../../services/timeService';
 
 export const useAddTimeModal = (updateList, onClose) => {
   const [date, setDate] = useState(false);
-  const [value, setValue] = useState(0);
   const { data } = useModal();
+
+  const {
+    register, trigger, getValues, handleSubmit, setValue: setFormValue,
+  } = useForm({ defaultValues: { time: '' }, mode: 'onTouched' });
 
   const { mutate } = useMutation(timeService.addTime, {
     onSuccess: (res) => {
@@ -16,26 +20,37 @@ export const useAddTimeModal = (updateList, onClose) => {
     },
   });
 
-  const handleChangeTime = () => {
-    mutate({ _id: data, time: value, date });
-  };
-
-  const handleChange = (e) => {
-    setValue(e.target.value);
+  const onSubmit = () => {
+    mutate({ _id: data, time: getValues('time'), date });
   };
 
   const setTime = (time) => {
-    setValue(time);
+    setFormValue('time', time);
+    trigger('time');
   };
 
   const handleChangeDate = (date) => {
     setDate(date);
   };
 
+  useEffect(() => {
+    const keyDownHandler = (event) => {
+      if (event.key === 'Enter') {
+        onSubmit();
+      }
+    };
+
+    document.addEventListener('keydown', keyDownHandler);
+
+    return () => {
+      document.removeEventListener('keydown', keyDownHandler);
+    };
+  }, [data]);
+
   return {
-    value,
-    handleChange,
-    handleChangeTime,
+    handleSubmit,
+    onSubmit,
+    register,
     handleChangeDate,
     setTime,
   };
