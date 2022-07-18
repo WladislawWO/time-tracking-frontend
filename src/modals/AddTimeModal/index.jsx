@@ -38,7 +38,7 @@ export function AddTimeModal({
 
           <Datepicker onChange={handleChangeDate} />
 
-          <Button styles={st.btn}>
+          <Button styles={st.btn} type="submit">
             Save
           </Button>
         </div>

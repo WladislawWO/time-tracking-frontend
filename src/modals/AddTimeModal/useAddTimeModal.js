@@ -36,6 +36,8 @@ export const useAddTimeModal = (updateList, onClose) => {
   useEffect(() => {
     const keyDownHandler = (event) => {
       if (event.key === 'Enter') {
+        event.preventDefault();
+
         onSubmit();
       }
     };
