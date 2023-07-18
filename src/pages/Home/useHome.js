@@ -3,13 +3,14 @@ import { useMutation } from 'react-query';
 import { useMain } from '../../contexts/main';
 import { timeService } from '../../services/timeService';
 import { formatTime, getTimeLabels } from '../../utils';
+import { DEFAULT_ADD_TIME } from '../../constants';
 
 export const useHome = () => {
   const [list, setList] = useState([]);
   const { timeList, isLoading, refetchTimeList } = useMain();
 
   const updateList = (item) => {
-    setList(list.map((i) => (i._id === item._id ? { ...i, ...item } : i)));
+    setList(list.map((i) => (i.name === item.type ? { ...i, ...item } : i)));
   };
 
   const { mutate, isLoading: isLoadingUpdate } = useMutation(timeService.addTime, {
@@ -26,8 +27,8 @@ export const useHome = () => {
     onSuccess: refetchTimeList,
   });
 
-  const handleAddTime = (_id, time) => {
-    mutate({ _id, time });
+  const handleAddTime = (id, name, time) => {
+    mutate({ id, time: time + DEFAULT_ADD_TIME, type: name });
   };
 
   useEffect(() => {

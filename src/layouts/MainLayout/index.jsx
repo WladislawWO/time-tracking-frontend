@@ -22,13 +22,13 @@ export default function MainLayout({ children }) {
   const location = useLocation();
   return (
     <div className={st.mainLayoutContainer}>
-      <div className={st.tabs}>
+      {/* <div className={st.tabs}>
         {tabs.map(({ link, title }, i) => (
           <Link className={cn(st.tab, { [st.active]: link === location.pathname })} to={link} key={i}>
             {title}
           </Link>
         ))}
-      </div>
+      </div> */}
       {children}
     </div>
   );

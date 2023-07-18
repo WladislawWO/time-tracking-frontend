@@ -27,23 +27,19 @@ function Home() {
         </div>
       </Link>
 
-      <div className={st.refresh} onClick={updateStatistics}>
-        <RefreshIcon className={st.refreshIcon} />
-      </div>
-
       <div className={st.trackingContainer}>
         {list.map(({
-          time, name, streak, _id, minTime,
+          time, name, streak, id, minTime, type_id,
         }) => (
           <TimeCard
-            key={_id}
+            key={type_id}
             minTime={minTime}
             streak={streak}
             time={time}
             title={name}
-            id={_id}
-            onClickCard={() => handleAddTime(_id, DEFAULT_ADD_TIME)}
-            handlePlus={() => onOpen(ADD_TIME_MODAL, _id)}
+            id={id}
+            onClickCard={() => handleAddTime(id, name, time)}
+            handlePlus={() => onOpen(ADD_TIME_MODAL, id)}
           />
         ))}
       </div>

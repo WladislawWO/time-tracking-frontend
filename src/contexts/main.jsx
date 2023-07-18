@@ -11,16 +11,16 @@ export const useMain = () => useContext(MainContext);
 
 function MainProvider({ children }) {
   const { data: timeList, isLoading, refetch: refetchTimeList } = useGetTimeListQuery();
-  const { data: routineList, isLoading: isLoadingRoutine } = useGetRoutineListQuery();
-  const { data: todoList, isLoading: isLoadingTodo } = useTodoListQuery();
+  // const { data: routineList, isLoading: isLoadingRoutine } = useGetRoutineListQuery();
+  // const { data: todoList, isLoading: isLoadingTodo } = useTodoListQuery();
 
   const value = useMemo(() => ({
     timeList,
-    routineList,
-    todoList,
-    isLoading: isLoading || isLoadingRoutine || isLoadingTodo,
+    isLoading,
     refetchTimeList,
-  }), [isLoading, timeList, isLoadingRoutine, isLoadingTodo, routineList, todoList]);
+  }), [isLoading, timeList]);
+
+  // const value = useMemo(() => ({}), []);
 
   return <MainContext.Provider value={value}>{children}</MainContext.Provider>;
 }
