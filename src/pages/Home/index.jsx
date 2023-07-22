@@ -29,17 +29,18 @@ function Home() {
 
       <div className={st.trackingContainer}>
         {list.map(({
-          time, name, streak, id, minTime, type_id,
+          time, type, streak, id, minTime, type_id,
         }) => (
           <TimeCard
             key={type_id}
             minTime={minTime}
             streak={streak}
             time={time}
-            title={name}
+            title={type}
+            type={type}
             id={id}
-            onClickCard={() => handleAddTime(id, name, time)}
-            handlePlus={() => onOpen(ADD_TIME_MODAL, id)}
+            onClickCard={() => handleAddTime(id, type, time)}
+            handlePlus={() => onOpen(ADD_TIME_MODAL, { id, type, time })}
           />
         ))}
       </div>

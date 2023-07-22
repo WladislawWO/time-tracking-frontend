@@ -20,8 +20,10 @@ export const useAddTimeModal = (updateList, onClose) => {
     },
   });
 
-  const onSubmit = () => {
-    mutate({ _id: data, time: getValues('time'), date });
+  const onSubmit = ({ time }) => {
+    const { id, type } = data;
+
+    mutate({ id, time: +time + +data.time, type });
   };
 
   const setTime = (time) => {

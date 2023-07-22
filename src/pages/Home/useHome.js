@@ -10,7 +10,7 @@ export const useHome = () => {
   const { timeList, isLoading, refetchTimeList } = useMain();
 
   const updateList = (item) => {
-    setList(list.map((i) => (i.name === item.type ? { ...i, ...item } : i)));
+    setList(list.map((i) => (i.type === item.type ? { ...i, ...item } : i)));
   };
 
   const { mutate, isLoading: isLoadingUpdate } = useMutation(timeService.addTime, {

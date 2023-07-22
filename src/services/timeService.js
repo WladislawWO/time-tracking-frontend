@@ -8,6 +8,10 @@ class TimeService {
   async getTimeList() {
     return httpClient.get('/time').then((res) => res);
   }
+
+  async getTime(params) {
+    return httpClient.get('/time/time', { params }).then((res) => res);
+  }
 }
 
 export const timeService = new TimeService();

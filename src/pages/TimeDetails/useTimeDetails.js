@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useMutation, useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import dayjs from 'dayjs';
 import { queryKeys } from '../../api/queryKeys';
 import { timeService } from '../../services/timeService';
 
@@ -16,20 +17,17 @@ export const useTimeDetails = () => {
     [queryKeys.total, tab],
     isTotal
       ? () => timeService.getTotal(tab)
-      : () => timeService.getTime({ id: params.id, dataCount: tab }),
+      : () => timeService.getTime({ type: params.id, dataCount: tab }),
   );
   const { mutate, isLoading: isLoadingUpdateTime } = useMutation(timeService.updateTimeCategory);
 
   const { register, handleSubmit, setValue } = useForm();
 
-  const res = (isTotal ? data?.data : data?.data?.time) || [];
+  const res = data?.data || [];
 
-  const labels = res?.map(({ date }) => {
-    const [first, second, last] = date.split('-');
-    return `${last} ${months[second - 1]}`;
-  }) || [];
+  const labels = res.map(({ date }) => dayjs(date).format('MM/DD'));
 
-  const values = res?.map((i) => i.time) || [];
+  const values = res.map((i) => i.time);
 
   const onSubmit = ({ minTime }) => {
     mutate({ _id: params.id, minTime });

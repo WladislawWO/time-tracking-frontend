@@ -6,7 +6,7 @@ import Button from '../Button';
 import st from './style.module.scss';
 
 export default function TimeCard({
-  time, title, id, handlePlus, onClickCard, streak, minTime,
+  time, title, id, type, handlePlus, onClickCard, streak, minTime,
 }) {
   const onPlus = (e) => {
     e.stopPropagation();
@@ -42,7 +42,7 @@ export default function TimeCard({
         <Button styles={st.pluseBtn} variant="secondary" onClick={onPlus}>
           <PlusIcon className={st.icon} />
         </Button>
-        <Link to={`/time/${id}`} className={st.link} onClick={(e) => e.stopPropagation()}>
+        <Link to={`/time/${type}`} className={st.link} onClick={(e) => e.stopPropagation()}>
           <Button styles={st.detailsBtn}>
             <div className={st.detailText}>View Details</div>
             <EyeIcon className={st.eyeIcon} />
