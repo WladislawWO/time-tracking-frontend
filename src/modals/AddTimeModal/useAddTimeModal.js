@@ -21,9 +21,11 @@ export const useAddTimeModal = (updateList, onClose) => {
   });
 
   const onSubmit = ({ time }) => {
-    const { id, type } = data;
+    const { id, type, total } = data;
 
-    mutate({ id, time: +time + +data.time, type });
+    mutate({
+      id, time: +time + +data.time, type, total: +total + +time,
+    });
   };
 
   const setTime = (time) => {

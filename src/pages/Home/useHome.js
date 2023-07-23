@@ -7,28 +7,24 @@ import { DEFAULT_ADD_TIME } from '../../constants';
 
 export const useHome = () => {
   const [list, setList] = useState([]);
-  const { timeList, isLoading, refetchTimeList } = useMain();
+  const { timeList, isLoading } = useMain();
+  const total = list.reduce((res, item) => res + item.time, 0);
 
   const updateList = (item) => {
     setList(list.map((i) => (i.type === item.type ? { ...i, ...item } : i)));
   };
 
-  const { mutate, isLoading: isLoadingUpdate } = useMutation(timeService.addTime, {
+  const { mutate } = useMutation(timeService.addTime, {
     onSuccess: (res) => {
       const item = res.data;
       updateList(item);
     },
   });
 
-  const {
-    mutate: updateStatistics,
-    isLoading: isLoadingStatistics,
-  } = useMutation(timeService.updateTimeStatistics, {
-    onSuccess: refetchTimeList,
-  });
-
   const handleAddTime = (id, name, time) => {
-    mutate({ id, time: time + DEFAULT_ADD_TIME, type: name });
+    mutate({
+      id, time: time + DEFAULT_ADD_TIME, type: name, total: total + DEFAULT_ADD_TIME,
+    });
   };
 
   useEffect(() => {
@@ -37,15 +33,13 @@ export const useHome = () => {
     }
   }, [timeList?.data]);
 
-  const total = list.reduce((res, item) => res + item.time, 0);
-
   return {
-    isLoading: isLoading || isLoadingUpdate || isLoadingStatistics,
+    isLoading,
     list,
+    totalRaw: total,
     total: formatTime(total),
     totalLabel: getTimeLabels(total),
     handleAddTime,
-    updateStatistics,
     updateList,
   };
 };

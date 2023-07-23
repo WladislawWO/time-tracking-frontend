@@ -3,16 +3,14 @@ import CountUp from 'react-countup';
 import st from './style.module.scss';
 import TimeCard from '../../components/TimeCard';
 import { ADD_TIME_MODAL } from '../../constants/modals';
-import { DEFAULT_ADD_TIME } from '../../constants';
 import { useHome } from './useHome';
 import { AddTimeModal } from '../../modals/AddTimeModal';
 import { useModal } from '../../contexts/modals';
 import Loader from '../../components/Loader';
-import { RefreshIcon } from '../../assets/icons';
 
 function Home() {
   const {
-    list, total, isLoading, totalLabel, handleAddTime, updateList, updateStatistics,
+    list, total, isLoading, totalLabel, handleAddTime, updateList, totalRaw,
   } = useHome();
   const { open, onOpen, onClose } = useModal();
 
@@ -40,7 +38,9 @@ function Home() {
             type={type}
             id={id}
             onClickCard={() => handleAddTime(id, type, time)}
-            handlePlus={() => onOpen(ADD_TIME_MODAL, { id, type, time })}
+            handlePlus={() => onOpen(ADD_TIME_MODAL, {
+              id, type, time, total: totalRaw,
+            })}
           />
         ))}
       </div>

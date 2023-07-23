@@ -6,8 +6,6 @@ import dayjs from 'dayjs';
 import { queryKeys } from '../../api/queryKeys';
 import { timeService } from '../../services/timeService';
 
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
 export const useTimeDetails = () => {
   const [tab, setTab] = useState(30);
   const params = useParams();
@@ -16,7 +14,7 @@ export const useTimeDetails = () => {
   const { isLoading, data, remove } = useQuery(
     [queryKeys.total, tab],
     isTotal
-      ? () => timeService.getTotal(tab)
+      ? () => timeService.getTotal({ dataCount: tab })
       : () => timeService.getTime({ type: params.id, dataCount: tab }),
   );
   const { mutate, isLoading: isLoadingUpdateTime } = useMutation(timeService.updateTimeCategory);

@@ -12,6 +12,10 @@ class TimeService {
   async getTime(params) {
     return httpClient.get('/time/time', { params }).then((res) => res);
   }
+
+  async getTotal(params) {
+    return httpClient.get('/time/total', { params }).then((res) => res);
+  }
 }
 
 export const timeService = new TimeService();
