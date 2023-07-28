@@ -27,6 +27,7 @@ export const options = {
   },
   scales: {
     y: {
+      min: 0,
       ticks: { color: 'rgb(255, 255, 255, 0.7)' },
       grid: {
         color: 'rgb(255, 255, 255, 0.5)',
