@@ -14,7 +14,7 @@ export const useHome = () => {
     setList(list.map((i) => (i.type === item.type ? { ...i, ...item } : i)));
   };
 
-  const { mutate } = useMutation(timeService.addTime, {
+  const { mutate, isLoading: isLoadingUpdate } = useMutation(timeService.addTime, {
     onSuccess: (res) => {
       const item = res.data;
       updateList(item);
@@ -34,7 +34,7 @@ export const useHome = () => {
   }, [timeList?.data]);
 
   return {
-    isLoading,
+    isLoading: isLoading || isLoadingUpdate,
     list,
     totalRaw: total,
     total: formatTime(total),
